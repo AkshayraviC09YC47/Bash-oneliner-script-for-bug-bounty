@@ -1,0 +1,1 @@
+# Bash-oneliner-script-for-bug-bounty

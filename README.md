@@ -69,7 +69,7 @@ echo https://target.com | waybackurls | grep "=" | egrep -iv ".(jpg|jpeg|gif|css
 /.svn/entries
 /.svnignore
 ```
-# Favicon Hash Finder pythn script:
+# Favicon Hash Finder python script:
 ```
 import mmh3,requests,codecs,sys,urllib3
 

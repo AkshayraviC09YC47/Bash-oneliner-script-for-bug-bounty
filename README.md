@@ -98,3 +98,6 @@ xss%27;eval.call`${%27alert\x28window.origin\x29%27}`;//
 grep -EHirn "accesskeyladmin|aes|api_keylapikey|checkClientTrusted|crypt|http:|https:|password|pinning|secret|SHA256|SharedPreferences|superuser|token|X509TrustManager|insert into" APKfolder/
 
 ```
+
+# Burpsuite Scope Generator:
+`https://xcapri.github.io/scopegen/index.html`

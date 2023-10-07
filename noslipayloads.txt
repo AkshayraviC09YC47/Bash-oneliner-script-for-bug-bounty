@@ -1,0 +1,4 @@
+'+'
+Gifts' && 0 && 'x //false value
+Gifts' && 1 && 'x //True value
+'||1||'

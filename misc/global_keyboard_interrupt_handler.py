@@ -11,5 +11,7 @@ def global_keyboard_interrupt_handler(func):
     return wrapper
 
 @global_keyboard_interrupt_handler
-name = input("[+]Name: ")
-print(name)
+def testing():
+    name = input("[+]Name: ")
+    print(name)
+testing()

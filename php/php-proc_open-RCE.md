@@ -10,3 +10,48 @@
 - It is highly flexible but also dangerous if user input is not sanitized — can lead to **command injection**.
 - Always use `escapeshellarg()` or `escapeshellcmd()` to sanitize inputs before passing them to `proc_open()`.
 - Prefer native PHP alternatives (like `ZipArchive`, `file_get_contents()`, etc.) whenever possible for safety and clarity.
+
+## Vulnerable Code:
+
+```
+<?php
+if (isset($_POST['backup']) && !empty($_POST['password'])) {
+    $password = cleanEntry($_POST['password']);
+    $backupFile = "backups/backup_" . date('Y-m-d') . ".zip";
+
+    if ($password === false) {
+        echo "<div class='error-message'>Error: Try another password.</div>";
+    } else {
+        $logFile = '/tmp/backup_' . uniqid() . '.log';
+       
+        $command = "zip -x './backups/*' -r -P " . $password . " " . $backupFile . " .  > " . $logFile . " 2>&1 &";
+        
+        $descriptor_spec = [
+            0 => ["pipe", "r"], // stdin
+            1 => ["file", $logFile, "w"], // stdout
+            2 => ["file", $logFile, "w"], // stderr
+        ];
+
+        $process = proc_open($command, $descriptor_spec, $pipes);
+        if (is_resource($process)) {
+            proc_close($process);
+        }
+
+        sleep(2);
+
+        $logContents = file_get_contents($logFile);
+        if (strpos($logContents, 'zip error') === false) {
+            echo "<div class='backup-success'>";
+            echo "<p>Backup created successfully.</p>";
+            echo "<a href='" . htmlspecialchars($backupFile) . "' class='download-button' download>Download Backup</a>";
+            echo "<h3>Output:</h3><pre>" . htmlspecialchars($logContents) . "</pre>";
+            echo "</div>";
+        } else {
+            echo "<div class='error-message'>Error creating the backup.</div>";
+        }
+
+        unlink($logFile);
+    }
+}
+?>
+```

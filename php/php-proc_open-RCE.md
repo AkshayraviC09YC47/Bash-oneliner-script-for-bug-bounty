@@ -13,6 +13,7 @@
 
 ## Vulnerable Code:
 
+- The vulnerability occurs because the `$command` variable is built using unsanitized user input `($_POST['password'])`, which is directly concatenated into a shell command executed by `proc_open()`, leading to possible command injection.
 ```
 <?php
 if (isset($_POST['backup']) && !empty($_POST['password'])) {

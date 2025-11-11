@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  Modified network_security_config.xml
+  - Adds <debug-overrides> to allow user-installed CAs for debugging/interception.
+  - USE ONLY IN A TESTING ENVIRONMENT. Do NOT ship to production.
+-->
+<network-security-config>
+  <!-- default / base behaviour -->
+  <base-config cleartextTrafficPermitted="true">
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </base-config>
+
+  <!-- debug-overrides: allows user CAs (useful for Burp/mitmproxy interception on debug builds).
+       This block is only used when the app is debuggable or when device config allows it.
+       Keep this only in test builds. -->
+  <debug-overrides>
+    <trust-anchors>
+      <!-- allow user-installed CA certs + system certs during debugging -->
+      <certificates src="user" />
+      <certificates src="system" />
+    </trust-anchors>
+  </debug-overrides>
+
+  <!-- domain-specific configurations (kept from original file) -->
+  <domain-config>
+    <domain includeSubdomains="true">justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">FAfV5UhFtCeaEz6omnht90lzNAQiTP8+yzsHsuvXx2A=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+      <pin digest="SHA-256">5kJvNEMw0KjrCAu7eXY5HZdvyCS13BbA0VJG1RSP91w=</pin>
+      <pin digest="SHA-256">fSQwjdX6LYKMMUpN54s61sa6Gaka/0C3TvDEkjdy1qA=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">securepg.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">no+JEvSQjHwtB+XFYAgiO1mNMYu2jvEBPEoZ+HjC7ww=</pin>
+      <pin digest="SHA-256">yWulDX8E5Q0XG4+9jVDljmO2FvAVzIRhn2MppW4vyUM=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">transactions.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">xfy6JNWcqPfB+fA+P9gOnOiulvra+Ldrl7TyY0X/1Wo=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">marketplace.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">g.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">e40YLAUnXDUoDnK07Me7UigkQmTRTpr3+tLFlt7eSe0=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">connect.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">P0nPZ8oaMceVSr3mr2WT19XB0QQIadm4Q3buyjmvs18=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">wap.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">e40YLAUnXDUoDnK07Me7UigkQmTRTpr3+tLFlt7eSe0=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">labs.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">imageupload.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">xfy6JNWcqPfB+fA+P9gOnOiulvra+Ldrl7TyY0X/1Wo=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">notifications.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">xfy6JNWcqPfB+fA+P9gOnOiulvra+Ldrl7TyY0X/1Wo=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">imgbeta.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">gapi.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">e40YLAUnXDUoDnK07Me7UigkQmTRTpr3+tLFlt7eSe0=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">api.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">xfy6JNWcqPfB+fA+P9gOnOiulvra+Ldrl7TyY0X/1Wo=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">profile.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">e40YLAUnXDUoDnK07Me7UigkQmTRTpr3+tLFlt7eSe0=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">us.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">cabs.justdial.com</domain>
+    <pin-set>
+      <pin digest="SHA-256">r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=</pin>
+      <pin digest="SHA-256">xfy6JNWcqPfB+fA+P9gOnOiulvra+Ldrl7TyY0X/1Wo=</pin>
+      <pin digest="SHA-256">zUIraRNo+4JoAYA7ROeWjARtIoN4rIEbCpfCRQT6N6A=</pin>
+    </pin-set>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">ustouch.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">uk.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">touchca.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">uae.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">ca.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config>
+    <domain includeSubdomains="true">doc.jdomni.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">jadoo.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">beta3.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">stagingjdpay2.justdial.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">www.bing.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">graph.facebook.com</domain>
+    <domain includeSubdomains="true">facebook.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">bing.com</domain>
+    <domain includeSubdomains="true">tse1.mm.bing.net/</domain>
+    <domain includeSubdomains="true">graph.facebook.com/</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">www.youtube.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+
+  <domain-config cleartextTrafficPermitted="true">
+    <domain includeSubdomains="true">docs.google.com</domain>
+    <trust-anchors>
+      <certificates src="system" />
+    </trust-anchors>
+  </domain-config>
+</network-security-config>
